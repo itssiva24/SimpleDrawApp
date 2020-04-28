@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.3/fabric.min.js"></script> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="board">
+        <div class="left">
+            <canvas id="c"></canvas>
+        </div>
+        <div class="right">
+            <div class="one saves" ><img src="http://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" alt="" id="0" width="250px" height="150px" ></div>
+            <div class="two saves" ><img src="http://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" alt="" id="1" width="250px" height="150px"></div>
+            <div class="three saves" ><img src="http://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" alt="" id="2" width="250px"height="150px" ></div>
+            <div class="four saves" ><img src="http://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif" alt="" id="3" width="250px"height="150px" ></div>
+        </div>
+    </div>
+    <div class="buttons">
+        <div class="controls">
+            <p>
+                <label for="file" class="custom-file-upload">
+                    Upload Image
+                </label>
+                <input type="file" id="file">
+            </p>
+            <p>
+                <button id="add" onclick="Add()">Add rectangle</button>
+              <button id="delete" onclick="deleteObject()">Delete rectangle</button>
+              <button id="save" onclick="save()">Save</button>
+              <button id="download" onclick="download()" href="">Download</button>
+              <label for="color">Choose stroke color:
+            </label>
+                <input type="color" name="color" id="color" onchange="changeStrokeColor(this)">
+            </p>
+            <br>
+            <br>
+            <p><i>Click Upload image, and click <b>Add rectangle</b> to add a rectangle.</i></p>
+            <p><i>If you want to save your progress, click <b>Save</b>. To restore it back click on the images in the second column.</i></p>
+            <p><i>Just for the sake of this task, you can restore your last 4 saved progress.</i></p>
+            <p><i>To delete a rectangle, click on the object you want to delete and then click <b>Delete </b>button.</i></p>
+          </div>
+    </div>
+
+
+    <script src="sketch.js"></script>
+</body>
+</html>

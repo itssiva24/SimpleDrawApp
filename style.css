@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.board {
+	display: flex;
+	margin: 25px 0 0 0;
+	justify-content: center;
+}
+canvas {
+	width: 600px;
+	height: 606.4px;
+	border: 1px solid black;
+}
+.right {
+	display: flex;
+	flex-direction: column;
+}
+
+.saves {
+	box-sizing: content-box;
+	width: 250px;
+	height: 150px;
+	/* background-color: green; */
+	border: 1px solid black;
+	z-index: 1000;
+	/* margin-top: -1px;
+	margin-left: -1px; */
+}
+.saves:hover {
+	border: 1px blue solid;
+	cursor: pointer;
+	transform: scale(1.1);
+	z-index: 1100;
+}
+.controls {
+	display: inline-block;
+}
+.buttons {
+	display: flex;
+	margin: 25px;
+	justify-content: center;
+}
+input[type="file"] {
+	display: none;
+}
+input[type=color] {
+	width: 20px;
+	height: 20px;
+	/* border: none; */
+	/* border-radius: 8px;
+	background: none; */
+}
+
+.custom-file-upload:hover {
+	background: teal;
+	color: white;
+}
+p {
+	text-align: center;
+	margin-bottom: 10px;
+	/* padding: 0 2em; */
+}
+.custom-file-upload {
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	padding: 1em 2em;
+	cursor: pointer;
+	/* margin: 0 auto; */
+}
+button {
+	background: teal;
+	color: white;
+	border: none;
+	padding: 0.5em 1em;
+	margin: 0px 10px;
+	border-radius: 25px;
+	cursor: pointer;
+}
+#delete {
+	background: red;
+}
