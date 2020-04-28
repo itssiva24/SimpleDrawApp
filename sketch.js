@@ -80,9 +80,14 @@ window.addEventListener('click', (e) => {
 });
 
 //Download Image
-function download() {
-	window.open(canvas.toDataURL('png'));
-}
+
+var download = function() {
+	var link = document.createElement('a');
+	link.download = 'filename.png';
+	link.href = canvas.toDataURL();
+	link.click();
+};
+// window.open(canvas.toDataURL('png'));
 
 //Render
 function renderIcon(ctx, left, top, styleOverride, fabricObject) {
